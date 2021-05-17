@@ -4,17 +4,15 @@
 
 <body>
   <div class="container">
-    <div style="margin-left: 300px; margin-top: 50px">
-      <h1>Extract text from Images</h1>
+    <div class="jumbotron">
+      <h1> OCR Tool </h1>
+      <p> Extract text from Images <p>
     </div>
     <label for="image_file">Select image(s)</label>
-    <input type="file" id="image_file" name="myfile" multiple>
+    <input class="btn btn-warning" type="file" id="image_file" name="myfile" multiple>
     <br>
-    <button onclick="performOCR()"> Extract Text </button>
+    <button class="btn btn-success" onclick="performOCR()"> Extract Text </button>
     <br>
-    <div id="lbldiv" style="border: solid black 2px; padding: 50px; margin: 50px 150px;" hidden>
-    <label id="lblName"  > </label>
-    </div>
     <hr style="width:100%;text-align:left;margin-left:0">
     <hr style="width:100%;text-align:left;margin-left:0">
     <div id="bulk_result" style="display: grid; grid-template-columns: repeat(5, 1fr); grid-gap: 10px;">
@@ -46,8 +44,6 @@
         success: function(data) {
           if (endpoint == '/api/v1/extract_text') {
             swal("Converted Text", data.text);
-//             $('#lbldiv').show();
-//             $("#lblName").text(data.text);  
           }
           else {
             swal("Request Recieved", "Converted files will start showing up at the bottom soon!");
