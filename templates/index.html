@@ -5,14 +5,13 @@
 
 <body>
   <div class="container">
-    <div class="jumbotron">
-      <h1> OCR Tool </h1>
-      <p> Extract text from Images <p>
+    <div style="margin-left: 300px; margin-top: 50px">
+      <h1>Extract text from Images</h1>
     </div>
     <label for="image_file">Select image(s)</label>
-    <input class="btn btn-warning" type="file" id="image_file" name="myfile" multiple>
+    <input type="file" id="image_file" name="myfile" multiple>
     <br>
-    <button class="btn btn-success" onclick="performOCR()"> Extract Text </button>
+    <button onclick="performOCR()"> Extract Text </button>
     <br>
     <div id="lbldiv" style="border: solid black 2px; padding: 50px; margin: 50px 150px;" hidden>
     <label id="lblName"  > </label>
