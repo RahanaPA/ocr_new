@@ -47,8 +47,8 @@
         success: function(data) {
           if (endpoint == '/api/v1/extract_text') {
             swal("Converted Text", data.text);
-            $('#lbldiv').show();
-            $("#lblName").text(data.text);  
+//             $('#lbldiv').show();
+//             $("#lblName").text(data.text);  
           }
           else {
             swal("Request Recieved", "Converted files will start showing up at the bottom soon!");
